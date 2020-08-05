@@ -45,7 +45,7 @@ function getVideoByQuality(urls) {
   for (const key in urls) {
     const p = Number(key.match(/[0-9]+/)[0]); // 画质
 
-    if (p > max) {
+    if (p > max && urls[key] !== '') {
       max = p;
       uri = urls[key];
     }
